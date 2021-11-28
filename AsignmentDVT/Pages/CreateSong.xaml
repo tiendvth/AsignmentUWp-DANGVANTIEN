@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/Assets/bea01.jpg" />
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/music.jpg" />
         </Grid.Background>
         <StackPanel>
             <ScrollViewer>

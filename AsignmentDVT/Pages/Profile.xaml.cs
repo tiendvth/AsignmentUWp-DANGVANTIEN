@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -48,9 +49,17 @@ namespace AsignmentDVT.Pages
             }
         }
 
-        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        private async void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+            StorageFile storageFile = await storageFolder.GetFileAsync("milt.txt");
+            await storageFile.DeleteAsync();
+            ContentDialog contentDialog = new ContentDialog();
+            contentDialog.Title = "Success!.";
+            contentDialog.Content = "logout Success!";
+            contentDialog.PrimaryButtonText = "oke";
+            await contentDialog.ShowAsync();
+            this.Frame.Navigate(typeof(Pages.ListSong));
 
         }
     }

@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/Assets/bea01.jpg" />
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/4k.jpg" />
         </Grid.Background>
         <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">

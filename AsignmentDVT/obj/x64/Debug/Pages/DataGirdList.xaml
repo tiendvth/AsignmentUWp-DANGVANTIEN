@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/Assets/bea01.jpg" />
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/1080.jpg" />
         </Grid.Background>
         <Custom:DataGrid x:ConnectionId='2' Margin="10,10,10,10" AutoGenerateColumns="True" x:Name="DataSong"/>
     </Grid>
