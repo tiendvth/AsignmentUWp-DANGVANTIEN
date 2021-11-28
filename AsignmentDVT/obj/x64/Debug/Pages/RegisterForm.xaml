@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="AsignmentDVT.Pages.RegisterForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentDVT.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='2' x:Name="main">
+        <ScrollViewer Background="AliceBlue" Margin="0 30 0 0">
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock  Text="Register" Margin="20 10 0 0" FontSize="20" FontWeight="Bold" 
+                       HorizontalAlignment="Center"/>
+                <StackPanel Style="{StaticResource StackControl}">
+                    <TextBox x:ConnectionId='20' x:Name="FirstName" PlaceholderText="Please enter your first name" 
+                         Header="First name" Width="300" Margin="0 0 20 0"/>
+                    <TextBox x:ConnectionId='21' x:Name="LastName" PlaceholderText="Please enter your last name" 
+                         Header="Last name" Width="300"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackControl}">
+                    <PasswordBox x:ConnectionId='18' x:Name="Password" Margin="0 0 20 0" Header="Password" Width="300" 
+                             PlaceholderText="Please enter your password"/>
+                    <PasswordBox x:ConnectionId='19' x:Name="ConfirmPassword" Header="Confirm Password" Width="300" 
+                             PlaceholderText="Please enter your confirm password"/>
+                </StackPanel>
+                <TextBox x:ConnectionId='3' x:Name="Address" Header="Address" Height="100" Width="620" 
+                     PlaceholderText="Please enter your address" Style="{StaticResource LeftTextBox}"/>
+                <TextBox x:ConnectionId='4' x:Name="Phone" Header="Phone" Width="300" PlaceholderText="Please enter your phone" 
+                     Style="{StaticResource LeftTextBox}"/>
+                <TextBlock Text="Photo" Margin="20 20 0 0"/>
+                <StackPanel Style="{StaticResource StackControl}">
+                    <Border Margin="0 0 20 0" Width="170" Height="170" BorderBrush="LightGray" 
+                        BorderThickness="1" CornerRadius="5">
+                        <Border.Background>
+                            <ImageBrush x:ConnectionId='17' Stretch="UniformToFill" ImageSource="/Assets/Square150x150Logo.scale-200.png" x:Name="PreviewPhoto"/>
+                        </Border.Background>
+                    </Border>
+                    <Button x:ConnectionId='14' Content="Capture Photo"                       Margin="0 0 30 20"/>
+                    <HyperlinkButton x:ConnectionId='15'                             Content="or Upload a photo" Margin="0 0 30 20"/>
+                    <ProgressRing x:ConnectionId='16' x:Name="ProcessRing" IsActive="False"/>
+                </StackPanel>
+                <TextBlock Text="Gender" Margin="20 10 0 0"/>
+                <StackPanel Style="{StaticResource StackControl}">
+                    <RadioButton x:ConnectionId='11' Tag="Male" GroupName="gender" IsChecked="True"                              />
+                    <RadioButton x:ConnectionId='12' Tag="Famale" GroupName="gender"                              />
+                    <RadioButton x:ConnectionId='13' Tag="Other" GroupName="gender"                              />
+                </StackPanel>
+                <TextBox x:ConnectionId='5' x:Name="Email" Header="Email" Height="100" Width="620" 
+                     PlaceholderText="Please enter your email" Style="{StaticResource LeftTextBox}"/>
+                <DatePicker x:ConnectionId='6' x:Name="dataPicker" Header="Birthday" Margin="20 10 0 0"/>
+                <TextBox x:ConnectionId='7' x:Name="Introduction" Header="Introduction" Width="620" Margin="20 20 0 20"
+                     PlaceholderText="Please enter your introducton" Style="{StaticResource LeftTextBox}"/>
+                <StackPanel Style="{StaticResource StackControl}">
+                    <Button x:ConnectionId='10' Content="Submit" Width="100" Margin="0 0 20 0"                 />
+                    <Button Content="Reset" Width="100" Margin="0 0 20 0"/>
+                </StackPanel>
+                <StackPanel Margin="20 10 20 0">
+                    <HyperlinkButton x:ConnectionId='8' Content="Login"                   />
+                    <HyperlinkButton x:ConnectionId='9' Content="Menu"                   />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
+

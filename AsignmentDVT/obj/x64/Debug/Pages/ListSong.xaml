@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="AsignmentDVT.Pages.ListSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentDVT.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:Entities="using:AsignmentDVT.Entities"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/co.gif" />
+
+        </Grid.Background>
+        <StackPanel>
+            <ScrollViewer MaxHeight="900" >
+                <StackPanel>
+                    <ListView x:ConnectionId='3' x:Name="MyListView"                           >
+                        <ListView.ItemTemplate>
+                            <DataTemplate                           >
+                                <Grid x:ConnectionId='5' >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Ellipse x:Name="Ellipse"  Grid.RowSpan="2" Width ="70" Height="70" Margin="6"
+                                 VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Ellipse.Fill>
+                                            <ImageBrush x:ConnectionId='9'                                 />
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <TextBlock x:ConnectionId='7' Grid.Column="1"
+                                        
+                               
+                    Style="{ThemeResource BaseTextBlockStyle}"
+                    Margin="12,6,0,0"/>
+                                    <TextBlock x:ConnectionId='8'   Grid.Column="1"
+                    Grid.Row="1"
+                                          
+                               
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Margin="12,0,0,6"/>
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </ScrollViewer>
+            <MediaPlayerElement x:ConnectionId='2' x:Name="MediaPlayer"                    
+                    AutoPlay="True"
+                    AreTransportControlsEnabled="True" />
+
+        </StackPanel>
+    </Grid>
+</Page>
+

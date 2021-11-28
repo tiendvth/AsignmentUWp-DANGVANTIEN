@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="AsignmentDVT.Pages.Profile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentDVT.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/4k.jpg" />
+        </Grid.Background>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Email" FontWeight="Bold" Width="100"/>
+                <TextBlock Text="" x:Name="Email"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Full Name" FontWeight="Bold" Width="100"/>
+                <TextBlock Text="" x:Name="FullName"/>
+            </StackPanel>
+            <Button Content="Logout" Click="LogoutButton_Click" Background="#CC9966" Margin="10 0 0 0"/>
+        </StackPanel>
+    </Grid>
+</Page>

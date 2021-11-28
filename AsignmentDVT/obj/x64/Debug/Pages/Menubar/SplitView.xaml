@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="AsignmentDVT.Pages.Menubar.SplitView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentDVT.Pages.Menubar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Key="MenuItem" TargetType="StackPanel">
+            <Setter Property="Margin" Value="0 0 0 10"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+    </Page.Resources>
+    <SplitView x:ConnectionId='2' Background="Beige" x:Name="MySplitView" DisplayMode="CompactInline" IsPaneOpen="True">
+        <SplitView.Pane>
+            <StackPanel Background="#8dbce7" >
+                <SymbolIcon x:ConnectionId='3' HorizontalAlignment="Left" Margin="15 0 0 0" Symbol="GlobalNavigationButton"                           />
+                <StackPanel Margin="15 20 0 0">
+                    <StackPanel x:ConnectionId='4' Tag="Register" Style="{StaticResource MenuItem}"                           >
+                        <SymbolIcon Symbol="AddFriend" Margin="0 0 20 0"/>
+                        <TextBlock Text="Register"/>
+                    </StackPanel>
+                    <StackPanel x:ConnectionId='5' Tag="Login" Style="{StaticResource MenuItem}"                           >
+                        <SymbolIcon Symbol="ContactInfo" Margin="0 0 20 0"/>
+                        <TextBlock x:ConnectionId='6' Name="LoginLink" Text="Login"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Frame x:ConnectionId='7' x:Name="MyContent"></Frame>
+        </SplitView.Content>
+    </SplitView>
+</Page>
+

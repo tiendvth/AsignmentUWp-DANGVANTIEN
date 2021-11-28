@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="AsignmentDVT.Pages.Menubar.NavigationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsignmentDVT.Pages.Menubar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="AntiqueWhite">
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <NavigationView x:ConnectionId='2' RequestedTheme="Dark"                                                   >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="ListSong" Icon="MusicInfo" Content="List Song"/>
+                <NavigationViewItem Tag="CreateSong" Icon="Audio" Content="Create Song"/>
+                <NavigationViewItem Tag="MySong" Icon="ContactInfo" Content="My Song"/>
+                <NavigationViewItem Tag="DataGrid" Icon="Add" Content="DataGrid"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Tag="RecentView" Icon="Clock" Content="Recent View"/>
+                <NavigationViewItem Tag="Now Playing" Icon="Play" Content="Now Playing"/>
+                <NavigationViewItem Tag="MySong" Icon="AlignCenter" Content="Playlist"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Tag="Profile" Icon="Contact" Content="Profile"/>
+            </NavigationView.MenuItems>
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search"/>
+            </NavigationView.AutoSuggestBox>
+            <Frame x:ConnectionId='3' x:Name="contentFrame"/>
+        </NavigationView>
+    </Grid>
+</Page>
+
